@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="addressBean1" class="com.test.bean.Address">  
+<property name="country" value="Brazil" ></property>
+<property name="city" value="Santos" ></property>
+<property name="zipCode" value="100100" ></property>  
+</bean>  
+
+<!-- <bean id="addressBean2" class="com.test.bean.Address">  
+<property name="country" value="India" ></property>
+<property name="city" value="Kolkata" ></property>
+<property name="zipCode" value="101101" ></property>  
+</bean>  -->
+
+<bean id="employee" class="com.test.bean.EmployeeBean">
+<property name="address" ref="addressBean1"></property>
+<property name="name" value="Neymar"></property>
+<property name="org" value="Bravia"></property>
+</bean>
+  <bean id="addressConstructor" class="com.test.bean.AddressConstructor">
+  <constructor-arg type="java.lang.String"><value>India</value></constructor-arg>
+  <constructor-arg type="int"><value>11001100</value></constructor-arg>
+  <constructor-arg type="java.lang.String"><value>West Bengal</value></constructor-arg>
+  <constructor-arg type="int"><value>11</value></constructor-arg>
+  </bean>
+  
+  <bean id="question" class="com.test.bean.Question">
+  <property name="id" value="1"/>
+  <property name="question" value="testing 1"></property>
+  <property name="map">
+  <map>
+  <entry key-ref="user1" value-ref="addressBean1"></entry>
+  <entry key-ref="user2" value-ref="addressBean2"></entry>
+  </map>
+  </property>
+  </bean>
+  
+  <bean id="user1" class="com.test.bean.User">
+  <constructor-arg name="id" type="int" value="11"/>
+  <constructor-arg name="name" type="java.lang.String" value="A"/>
+  </bean>
+  <bean id="user2" class="com.test.bean.User">
+  <constructor-arg name="id" type="int" value="22"/>
+  <constructor-arg name="name" type="java.lang.String" value="B"/>
+  </bean>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</beans>  
