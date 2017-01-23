@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="SpringDemo1">
+		<class>com.test.model.Cart</class>
+		<class>com.test.model.Category</class>
+		<class>com.test.model.Comment</class>
+		<class>com.test.model.Country</class>
+		<class>com.test.model.Coupon</class>
+		<class>com.test.model.Customerorder</class>
+		<class>com.test.model.Orderstatus</class>
+		<class>com.test.model.Person</class>
+		<class>com.test.model.Product</class>
+		<class>com.test.model.Rating</class>
+		<class>com.test.model.Transaction</class>
+		<class>com.test.model.UserDetail</class>
+		<class>com.test.model.Shipping</class>
+	</persistence-unit>
+</persistence>
