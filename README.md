@@ -1,2 +1,2 @@
 # ShoppingCart
-SpringMVC + Hibernate + mySQL + jQuery + Bootstrap
+SpringMVC + Hibernate + JPA + mySQL + jQuery + Bootstrap
